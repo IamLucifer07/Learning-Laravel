@@ -64,22 +64,6 @@ class JobController extends Controller
         return view('jobs.edit', ['job' => $job]);
     }
 
-    // public function update(Job $job)
-    // {
-    //     // authorize on hold.. 
-
-    //     request()->validate([
-    //         'title' => ['required', 'min:4'],
-    //         'salary' => ['required']
-    //     ]);
-
-    //     $job->update([
-    //         'title' => request('title'),
-    //         'salary' => request('salary')
-    //     ]);
-
-    //     return redirect('/jobs/' . $job->id);
-    // }
 
     public function update(Request $request, Job $job)
     {
