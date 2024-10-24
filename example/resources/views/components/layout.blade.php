@@ -29,19 +29,12 @@
                     <div class="hidden md:block">
                         <div class="ml-4 flex items-center md:ml-6">
 
+                            @guest
+                            <x-nav-link href="/login" :active="request()->is('login')">Log In</x-nav-link>
 
-                            <!-- Profile dropdown -->
-                            <div class="relative ml-3">
-                                <div>
-                                    <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                                        <span class="absolute -inset-1.5"></span>
-                                        <span class="sr-only">Open user menu</span>
-                                        <img class="h-8 w-8 rounded-full" src="https://assets.laracasts.com/images/mascot/larysmart.svg" alt="">
-                                    </button>
-                                </div>
+                            <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
+                            @endguest
 
-
-                            </div>
                         </div>
                     </div>
                     <div class="-mr-2 flex md:hidden">
