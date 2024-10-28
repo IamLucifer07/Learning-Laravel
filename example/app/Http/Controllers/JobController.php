@@ -63,34 +63,15 @@ class JobController extends Controller
 
     public function edit(Job $job)
     {
-        Gate::define('edit-job', function (User $user, Job $job) {
-            return $job->employer->user->is($user);
-        });
+        // if (Auth::guest()) {
+        //     return redirect('/login');
+        // }
 
-        if (Auth::guest()) {
-            return redirect('/login');
-        }
-
+        // Gate::authorize('edit-job', $job);
 
         return view('jobs.edit', ['job' => $job]);
     }
 
-    // public function update(Job $job)
-    // {
-    //     // authorize on hold.. 
-
-    //     request()->validate([
-    //         'title' => ['required', 'min:4'],
-    //         'salary' => ['required']
-    //     ]);
-
-    //     $job->update([
-    //         'title' => request('title'),
-    //         'salary' => request('salary')
-    //     ]);
-
-    //     return redirect('/jobs/' . $job->id);
-    // }
 
     public function update(Request $request, Job $job)
     {
