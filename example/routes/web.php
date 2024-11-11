@@ -8,11 +8,10 @@ use App\Mail\JobPosted;
 use Illuminate\Support\Facades\Mail;
 
 Route::get('test', function () {
-    Mail::to('talktogaurav07@gmail.com')->send(
-        new JobPosted
-    );
+
     return "Done";
 });
+
 
 Route::view('/', 'home');
 Route::view('/contact', 'contact');
