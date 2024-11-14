@@ -63,6 +63,7 @@
                 </div>
             </div>
 
+            <!-- Mobile menu, show/hide based on menu state. -->
             <div class="md:hidden" id="mobile-menu">
                 <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
