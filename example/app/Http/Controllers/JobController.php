@@ -43,6 +43,11 @@ class JobController extends Controller
     //         'salary' => request('salary'),
     //         'employer_id' => 4
     //     ]);
+    //     Job::create([
+    //         'title' => request('title'),
+    //         'salary' => request('salary'),
+    //         'employer_id' => 4
+    //     ]);
 
     //     return redirect('/jobs');
     // }
