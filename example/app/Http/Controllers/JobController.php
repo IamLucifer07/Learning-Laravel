@@ -46,7 +46,12 @@ class JobController extends Controller
     //     return redirect('/jobs');
     // }
 
-
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => ['required', 'min:4'],
+            'salary' => ['required']
+        ]);
 
         $job = Job::create([
             'title' => $request->input('title'),
